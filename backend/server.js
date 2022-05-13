@@ -6,6 +6,7 @@ server.use(express.json());
 const basicAuth = require('express-basic-auth')
 const logsRouter = require('./routes/logsRoutes');
 const userRouter = require('./routes/userRoutes');
+const medsRouter = require('./routes/medRoutes');
 server.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -20,6 +21,7 @@ server.use(function(req, res, next) {
   
   server.use('/logs', logsRouter);
   server.use('/user', userRouter);
+  server.use('/meds', medsRouter);
   server.get('/', (req, res) => {
     res.send('authorized');
 
