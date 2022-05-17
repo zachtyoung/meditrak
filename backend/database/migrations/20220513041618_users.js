@@ -7,6 +7,8 @@
     .createTable('users', function(users) {
       users.increments('id');
       users.string('name');
+      users.string('email').notNullable();
+      users.string('password').notNullable();
     })
 };
 
