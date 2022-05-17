@@ -8,6 +8,7 @@ const EventForm = () => {
         <input placeholder="Duration" />
         <input placeholder="Medication given" />
         <textarea placeholder="Notes" />
+        <input className="submit" type="submit" value="Add" />
       </Form>
     </Container>
   );

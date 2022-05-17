@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  margin-top: 20px;
-  padding: 20px 20px 0 20px;
-`;
+export const Container = styled.div``;
 
 export const Form = styled.form`
   display: flex;
@@ -19,5 +16,10 @@ export const Form = styled.form`
     height: 200px;
     border-radius: 20px;
     padding: 8px 14px;
+  }
+  .submit {
+    border: none;
+    color: white;
+    background-color: #2ca6ff;
   }
 `;

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Container, AddButton } from "./styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "antd";
 import EventForm from "../EventForm";
 const AddEvent = () => {
@@ -7,6 +9,8 @@ const AddEvent = () => {
   return (
     <Container>
       <Modal
+        title="Add New Event"
+        closeIcon={<FontAwesomeIcon icon={faXmark} />}
         footer={null}
         centered
         visible={modalOpen}
