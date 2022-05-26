@@ -11,4 +11,7 @@ export const AddButton = styled.button`
   padding: 10px 0;
   font-weight: 700;
   cursor: pointer;
+  &:hover {
+    background-color: #0692f8;
+  }
 `;

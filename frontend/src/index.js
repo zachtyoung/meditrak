@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./pages/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 import Register from "./pages/Register";
 import Guest from "./pages/Guest";
 import Header from "./components/Header";
@@ -13,16 +13,18 @@ import Footer from "./components/Footer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Header />
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/guest" element={<Guest />} />
-      </Routes>
-    </BrowserRouter>
-    <Footer />
+    <div className="main-app">
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/guest" element={<Guest />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </div>
   </React.StrictMode>
 );
 
